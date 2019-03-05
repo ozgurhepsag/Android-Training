@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TipApp</string>
+
+    <string name="msg_billamout">Bill Amount</string>
+    <string name="hint_billamount">Enter Bill Amount Here</string>
+    <string name="servicerating">Service Rating</string>
+    <string name="tippercent">%s%% Tip Percent</string>
+    <string name="tiptotal">$%s Tip Total</string>
+    <string name="billtotal">Bill Total</string>
+    <string name="billtotalresult">$%s</string>
+    <string name="regular_service_tip_button">Regular Service Tip Button</string>
+    <string name="good_service_tip_button">Good Service Tip Button</string>
+    <string name="excellent_service_tip_button">Excellent Service Tip Button</string>
+</resources>
