@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnDB
                         .addToBackStack(null).commit();
                 break;
             case 1:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container ,new ReadContactsFragment())
+                        .addToBackStack(null).commit();
                 break;
             case 2:
                 break;

@@ -35,7 +35,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         bnSave = view.findViewById(R.id.btn_add_contact);
+        bnView = view.findViewById(R.id.btn_view_contacts);
         bnSave.setOnClickListener(this);
+        bnView.setOnClickListener(this);
 
         /*bnDelete = view.findViewById(R.id.btn_delete_contact);
         bnUpdate = view.findViewById(R.id.btn_update_contact);
@@ -52,6 +54,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 dbOperationListener.dbOperationsPerformed(0);
                 break;
             case R.id.btn_view_contacts:
+                dbOperationListener.dbOperationsPerformed(1);
                 break;
             case R.id.btn_delete_contact:
                 break;
