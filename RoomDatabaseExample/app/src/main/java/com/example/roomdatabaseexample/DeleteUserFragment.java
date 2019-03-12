@@ -27,7 +27,7 @@ public class DeleteUserFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_delete_user, container, false);
         edtId = view.findViewById(R.id.txt_user_id);
         btnDelete = view.findViewById(R.id.btn_delete);
 
@@ -40,7 +40,7 @@ public class DeleteUserFragment extends Fragment {
                 user.setId(id);
 
                 MainActivity.database.userDAO().deleteUser(user);
-                Toast.makeText(getActivity(), "User Added Successfully",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "User Deleted Successfully",Toast.LENGTH_SHORT).show();
 
                 edtId.setText("");
             }
