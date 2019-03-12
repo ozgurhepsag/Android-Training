@@ -10,7 +10,7 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="395dp"
-        android:layout_height="666dp"
+        android:layout_height="614dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="70dp"

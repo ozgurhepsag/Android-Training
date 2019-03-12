@@ -45,10 +45,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_add_user:
                 MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container ,new AddUserFragment())
                         .addToBackStack(null).commit();
-                //dbOperationListener.dbOperationsPerformed(0);
                 break;
             case R.id.btn_view_users:
-                //dbOperationListener.dbOperationsPerformed(1);
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container ,new ReadUserFragment())
+                        .addToBackStack(null).commit();
                 break;
             case R.id.btn_delete_user:
                 //dbOperationListener.dbOperationsPerformed(2);
