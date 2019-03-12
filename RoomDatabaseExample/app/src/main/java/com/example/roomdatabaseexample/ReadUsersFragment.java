@@ -16,10 +16,10 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ReadUserFragment extends Fragment {
+public class ReadUsersFragment extends Fragment {
     private TextView txtView;
 
-    public ReadUserFragment() {
+    public ReadUsersFragment() {
         // Required empty public constructor
     }
 
