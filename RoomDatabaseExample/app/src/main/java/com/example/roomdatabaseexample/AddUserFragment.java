@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -40,7 +41,14 @@ public class AddUserFragment extends Fragment {
                 String name = edtName.getText().toString();
                 String email = edtEmail.getText().toString();
 
+                User user = new User(id, name, email);
 
+                MainActivity.database.userDAO().addUser(user);
+                Toast.makeText(getActivity(), "User Added Successfully",Toast.LENGTH_SHORT).show();
+
+                edtId.setText("");
+                edtName.setText("");
+                edtEmail.setText("");
             }
         });
 

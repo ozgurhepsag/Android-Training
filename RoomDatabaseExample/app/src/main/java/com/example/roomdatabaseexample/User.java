@@ -16,6 +16,16 @@ public class User {
     @ColumnInfo(name = "user_email")
     private String email;
 
+    public User(){
+
+    }
+
+    public User(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
