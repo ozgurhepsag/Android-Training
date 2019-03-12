@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnDB
         }
     }
 
-
     @Override
     public void dbOperationsPerformed(int method) {
         switch (method){
@@ -34,8 +33,12 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnDB
                         .addToBackStack(null).commit();
                 break;
             case 2:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container ,new DeleteContactFragment())
+                        .addToBackStack(null).commit();
                 break;
             case 3:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container ,new UpdateContactFragment())
+                        .addToBackStack(null).commit();
                 break;
         }
     }

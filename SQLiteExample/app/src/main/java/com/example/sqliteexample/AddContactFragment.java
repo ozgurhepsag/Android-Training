@@ -51,7 +51,7 @@ public class AddContactFragment extends Fragment {
                 contactDBHelper.addContact(Integer.parseInt(id), name, email, database);
                 contactDBHelper.close();
                 setTextEmpty();
-                Toast.makeText(getActivity(), "Contact Saved Succesfully...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Contact Added Succesfully...", Toast.LENGTH_SHORT).show();
             }
         });
 

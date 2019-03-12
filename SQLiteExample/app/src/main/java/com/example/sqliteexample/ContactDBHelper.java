@@ -56,4 +56,22 @@ public class ContactDBHelper extends SQLiteOpenHelper {
 
         return cursor;
     }
+
+    public void updateContact(int id, String name, String email, SQLiteDatabase db){
+        ContentValues cv = new ContentValues();
+
+        cv.put(ContactContract.ContactEntry.NAME, name);
+        cv.put(ContactContract.ContactEntry.EMAIL, email);
+
+        String selection = ContactContract.ContactEntry.CONTACT_ID + " =  " + id;
+
+        db.update(ContactContract.ContactEntry.TABLE_NAME, cv, selection, null);
+
+    }
+
+    public void deleteContact(int id, SQLiteDatabase db){
+        String selection = ContactContract.ContactEntry.CONTACT_ID + " = " + id;
+
+        db.delete(ContactContract.ContactEntry.TABLE_NAME, selection, null);
+    }
 }

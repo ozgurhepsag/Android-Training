@@ -36,8 +36,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         bnSave = view.findViewById(R.id.btn_add_contact);
         bnView = view.findViewById(R.id.btn_view_contacts);
+        bnUpdate = view.findViewById(R.id.btn_update_contact);
+        bnDelete = view.findViewById(R.id.btn_delete_contact);
         bnSave.setOnClickListener(this);
         bnView.setOnClickListener(this);
+        bnDelete.setOnClickListener(this);
 
         /*bnDelete = view.findViewById(R.id.btn_delete_contact);
         bnUpdate = view.findViewById(R.id.btn_update_contact);
@@ -57,8 +60,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 dbOperationListener.dbOperationsPerformed(1);
                 break;
             case R.id.btn_delete_contact:
+                dbOperationListener.dbOperationsPerformed(2);
                 break;
             case R.id.btn_update_contact:
+                dbOperationListener.dbOperationsPerformed(3);
                 break;
         }
 
