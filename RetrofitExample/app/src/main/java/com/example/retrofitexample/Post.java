@@ -8,10 +8,16 @@ public class Post {
 
     private int userId;
 
-    private int id;
+    private Integer id; // Integer is nullable
 
     @SerializedName("body")
     private String text;
+
+    public Post(String title, int userId, String text) {
+        this.title = title;
+        this.userId = userId;
+        this.text = text;
+    }
 
     public String getTitle() {
         return title;
@@ -21,7 +27,7 @@ public class Post {
         return userId;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
